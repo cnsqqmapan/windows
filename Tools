@@ -1,0 +1,12 @@
+//获取程序当前运行的路径
+string GetAppRunPath()
+{
+	TCHAR szbuf[MAX_PATH] = { 0 };
+	LPTSTR lpStr;
+	GetModuleFileName(NULL, szbuf, MAX_PATH);
+	lpStr = _tcsrchr(szbuf, '\\');
+	if (lpStr != NULL)
+		*(++lpStr) = _T('\0');
+
+	return szbuf;
+}
