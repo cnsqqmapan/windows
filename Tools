@@ -10,3 +10,13 @@ string GetAppRunPath()
 
 	return szbuf;
 }
+
+//查找子窗体句柄-- 
+HWND FindWindowExA(
+  HWND   hWndParent,
+  HWND   hWndChildAfter,
+  LPCSTR lpszClass,
+  LPCSTR lpszWindow
+);
+
+::FindWindowEx(g_hwnd, NULL, L"hx_browser_exe", NULL);
